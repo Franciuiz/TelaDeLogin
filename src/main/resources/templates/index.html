@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Tela de Login</title>
+</head>
+<body>
+
+<h1>Tela de Entrada</h1>
+
+<form th:action="@{/login}" th:object="${loginForm}" method="post">
+	<p th:if="${DadosErrados}" class="error">Dados invalidos</p>
+
+	<label for="usuario">Usuario</label>
+	<input type="text" id="usuario" name="usuario" autofocus="autofocus" />
+	
+	<label for="senha">Senha</label>
+	<input type="password" id="senha" name="senha" />
+	
+	<br />
+	<input type="submit" value="Entrar" />
+</form>
+
+</body>
+</html>
